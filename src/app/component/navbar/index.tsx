@@ -4,6 +4,7 @@ import { logo } from "@/assets/images";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { SearchBar } from "./search";
 import { IoMdNotifications } from "react-icons/io";
+import Link from "next/link";
 // !other image
 
 export default function Navbar() {
@@ -11,13 +12,16 @@ export default function Navbar() {
     <header>
       <nav className="shadow-md">
         <div className="p-3 flex items-center gap-4">
-          <div className="flex items-center gap-3">
+          <Link href="/" className="flex items-center gap-3">
             <Image src={logo} alt={"logo"} width={60} height={80} />
-          </div>
+          </Link>
           <ul className="flex items-center space-x-4 font-semibold">
-            <li className="text-ellipsis text-nowrap text-sm text-slate-700 hover:underline">
+            <Link
+              href={"/pages/explore"}
+              className="text-ellipsis text-nowrap text-sm text-slate-700 hover:underline"
+            >
               Explore Mentor
-            </li>
+            </Link>
             <li className="text-ellipsis text-nowrap text-sm text-slate-700 hover:underline">
               Become Mentor
             </li>
