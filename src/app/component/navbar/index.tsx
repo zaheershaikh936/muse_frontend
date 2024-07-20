@@ -1,10 +1,11 @@
 import React from "react";
 import Image from "next/image";
 import { logo } from "@/assets/images";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { SearchBar } from "./search";
-import { IoMdNotifications } from "react-icons/io";
+import IsLogin from "./isLogin";
 import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import Auth from "../auth";
 // !other image
 
 export default function Navbar() {
@@ -27,17 +28,18 @@ export default function Navbar() {
             </li>
           </ul>
           <SearchBar />
-          <div className="flex items-center space-x-3">
-            <div className="border bg-primary p-1 rounded-full">
-              <IoMdNotifications size={30} />
-            </div>
-            <Avatar>
-              <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
-              <AvatarFallback>CN</AvatarFallback>
-            </Avatar>
-          </div>
+          <div className="flex items-center space-x-3">{isLogin()}</div>
         </div>
       </nav>
     </header>
   );
 }
+
+const isLogin = () => {
+  const login = true;
+  if (login) {
+    return <Auth />;
+  } else {
+    return <IsLogin />;
+  }
+};
