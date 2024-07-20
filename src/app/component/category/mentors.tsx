@@ -26,6 +26,7 @@ export default function Mentors(data: mentorT) {
               <div className="flex gap-3 py-3 overflow-scroll">
                 {data.company.map((company: companyT) => (
                   <div
+                    key={company.company}
                     id="company"
                     className="border w-full gap-3 p-3 flex border-gray-200 rounded-lg py-3"
                   >
@@ -55,7 +56,9 @@ export default function Mentors(data: mentorT) {
               {/* skills */}
               <div className="flex py-4 flex-wrap items-start gap-2 self-stretch overflow-hidden lg:gap-3">
                 {data.skills.map(({ name }: skillsT) => (
-                  <Badge variant="outline">{name}</Badge>
+                  <Badge key={name} variant="outline">
+                    {name}
+                  </Badge>
                 ))}
               </div>
             </div>

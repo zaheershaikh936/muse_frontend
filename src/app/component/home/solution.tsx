@@ -17,7 +17,7 @@ export default function Solution() {
               <div>
                 <p className="text-sm text-ellipsis text-nowrap">
                   <span className="font-bold">Expert Knowledge: </span>
-                  Learn faster from mentors' experiences and avoid common
+                  Learn faster from mentors experiences and avoid common
                   mistakes
                 </p>
                 <p className="text-sm text-ellipsis text-nowrap">
@@ -43,7 +43,7 @@ export default function Solution() {
               <div>
                 <p className="text-sm text-ellipsis text-nowrap">
                   <span className="font-bold">Industry Connections: </span>
-                  Gain access to mentors' professional networks, and
+                  Gain access to mentors professional networks, and
                   opportunities
                 </p>
                 <p className="text-sm text-ellipsis text-warp">

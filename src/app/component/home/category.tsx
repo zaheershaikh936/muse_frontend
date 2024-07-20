@@ -10,6 +10,7 @@ export default function Category() {
         {card.map((item: cardProp) => {
           return (
             <Card
+              key={item.id}
               title={
                 <div className="flex justify-between gap-10">
                   <h3 className="text-xl text-slate-700">{item.title}</h3>

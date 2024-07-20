@@ -69,7 +69,7 @@ export default function Experiences() {
           </p>
           <p className="py-2">{selectedData.location}</p>
           {selectedData.points.map((item) => (
-            <p className="py-2 flex items-center gap-2">
+            <p key={item.id} className="py-2 flex items-center gap-2">
               <FaCheck className="text-blue-500" />
               {item.description}
             </p>

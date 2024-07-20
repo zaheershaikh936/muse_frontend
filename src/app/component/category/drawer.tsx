@@ -17,6 +17,7 @@ import MentorReviews from "../mentor/reviews";
 import AboutSection from "../mentor/about";
 import Experiences from "../mentor/experiences";
 import Skills from "../mentor/skills";
+import { FaStar } from "react-icons/fa";
 
 interface MentorDrawerProps {
   children: React.ReactNode;
@@ -49,13 +50,26 @@ export default function MentorDrawer({ children, data }: MentorDrawerProps) {
               <Skills />
             </DrawerDescription>
           </DrawerHeader>
-          <DrawerFooter>
-            <DrawerClose>
-              <Button variant="outline">Cancel</Button>
-            </DrawerClose>
+          <DrawerFooter className="container border-t">
+            <div className="flex justify-between">
+              <div className="flex gap-5">
+                <Button variant="outline">View Profile</Button>
+                <Button variant="outline">Book a Call</Button>
+              </div>
+              <div className="">
+                <p className="flex gap-1 text-xs items-center">
+                  <FaStar color="e86a38" size={20} />
+                  <p className="mt-0.5">5.0 (7 Reviews)</p>
+                </p>
+              </div>
+            </div>
           </DrawerFooter>
         </DrawerContent>
       </div>
     </Drawer>
   );
+}
+
+{
+  /* <DrawerClose></DrawerClose>; */
 }

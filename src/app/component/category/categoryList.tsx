@@ -23,7 +23,7 @@ export default function CategoryList({
         {subCategory.map((item: subCategoryAllT) => {
           const subCategoryStyle = `justify-start text-sm text font-semibold py-5 px-3 hover:underline hover:bg-transparent mt-2 rounded-lg w-full`;
           return (
-            <Button variant="ghost" className={subCategoryStyle}>
+            <Button key={item.id} variant="ghost" className={subCategoryStyle}>
               {item.name}
             </Button>
           );

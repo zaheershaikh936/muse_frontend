@@ -145,4 +145,36 @@ const categoryAll: categoryAllT[] = [{
         }
     ]
 },]
-export { category, categoryAll }
+
+export type selectCategoryT = {
+    name: string,
+    value: string
+}
+const selectCategory: selectCategoryT[] = [{
+    name: "Software Developer",
+    value: "1"
+}, {
+    name: "Hiring manager",
+    value: "2"
+},
+{
+    name: "Account manager",
+    value: "3"
+}]
+
+const selectJobRole: selectCategoryT[] = [{
+    name: "Frontend Developer",
+    value: "1"
+}, {
+    name: "Backend Developer",
+    value: "2"
+},
+{
+    name: "Full Stack Developer",
+    value: "3"
+}, {
+    name: "Mobile Developer",
+    value: "4"
+}]
+
+export { category, categoryAll, selectCategory, selectJobRole }
