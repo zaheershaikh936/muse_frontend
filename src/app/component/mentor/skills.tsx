@@ -8,7 +8,11 @@ export default function Skills() {
       <h2 className="text-xl font-bold mb-2 border-b">Skills</h2>
       <div className="flex flex-wrap gap-5 ">
         {skills.map((skill) => (
-          <Badge variant="outline" className="flex gap-2 hover:bg-gray-200">
+          <Badge
+            key={skill.id}
+            variant="outline"
+            className="flex gap-2 hover:bg-gray-200"
+          >
             <Image
               src={skill.image || ""}
               alt={skill.name}
@@ -22,7 +26,11 @@ export default function Skills() {
       <h2 className="text-xl font-bold mb-2 border-b mt-10">Tools</h2>
       <div className="flex flex-wrap gap-5 ">
         {tools.map((tool) => (
-          <Badge variant="outline" className="flex gap-2 hover:bg-gray-200">
+          <Badge
+            key={tool.id}
+            variant="outline"
+            className="flex gap-2 hover:bg-gray-200"
+          >
             <Image
               src={tool.image || ""}
               alt={tool.name}

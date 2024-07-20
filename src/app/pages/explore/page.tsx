@@ -54,23 +54,19 @@ export default function ExploreMentor() {
       </div>
       <div className="">
         {mentor.map((item: mentorT, index: number) => (
-          <MentorDrawer
-            data={item}
-            key={index}
-            children={
-              <Mentors
-                id={item.id}
-                image={item.image}
-                name={item.name}
-                title={item.title}
-                description={item.description}
-                skills={item.skills}
-                company={item.company}
-                experience={item.experience}
-                role={item.role}
-              />
-            }
-          />
+          <MentorDrawer data={item} key={index}>
+            <Mentors
+              id={item.id}
+              image={item.image}
+              name={item.name}
+              title={item.title}
+              description={item.description}
+              skills={item.skills}
+              company={item.company}
+              experience={item.experience}
+              role={item.role}
+            />
+          </MentorDrawer>
         ))}
       </div>
     </section>

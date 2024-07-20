@@ -13,8 +13,8 @@ export default function Faqs() {
     <section className="py-5">
       <Header title={"FAQ'S"} />
       <Accordion type="single" collapsible>
-        {faqs.map((item: faqsT) => (
-          <AccordionItem value={item.item}>
+        {faqs.map((item: faqsT, index: number) => (
+          <AccordionItem key={index} value={item.item}>
             <AccordionTrigger>{item.question}</AccordionTrigger>
             <AccordionContent>{item.answer}</AccordionContent>
           </AccordionItem>
